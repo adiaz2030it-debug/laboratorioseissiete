@@ -49,3 +49,8 @@ def resumir_ventas(ventas):
 ventas = [("cafe", 2), ("te", 1), ("cafe", 3)]
 print(resumir_ventas(ventas))
 
+# Ejemplo adicional:
+# Resultado esperado:
+# {'productos': {'manzana', 'pan'}, 'unidades': 12, 'por_producto': {'pan': 7, 'manzana': 5}}
+ventas_ejemplo2 = [("pan", 4), ("manzana", 5), ("pan", 3)]
+print(resumir_ventas(ventas_ejemplo2))
