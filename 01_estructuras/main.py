@@ -1,4 +1,4 @@
-"""EJERCICIO 01 — Resumen de ventas
+"""EJERCICIO 01 - Resumen de ventas
 
 ENUNCIADO
 Recibes una lista de tuplas (producto, cantidad). Devuelve un diccionario con:
@@ -21,13 +21,38 @@ Añade al menos otro ejemplo usando print y escribe en un comentario qué espera
 Al terminar: git commit -m "Resuelve ejercicio 01".
 """
 
+
 def resumir_ventas(ventas):
-    # TODO: implementa lo solicitado y devuelve el resultado.
-    pass
+    productos = set()
+    unidades = 0
+    por_producto = {}
+
+    for producto, cantidad in ventas:
+        # Añadir al conjunto de productos
+        productos.add(producto)
+        
+        # Sumar al total general de unidades
+        unidades += cantidad
+        
+        # Acumular la cantidad en el diccionario por producto
+        if producto in por_producto:
+            por_producto[producto] += cantidad
+        else:
+            por_producto[producto] = cantidad
+
+    return {
+        "productos": productos,
+        "unidades": unidades,
+        "por_producto": por_producto
+    }
 
 
-# Ejemplo de uso: inicialmente imprime None porque falta la implementación.
+# Ejemplo de uso:
 ventas = [("cafe", 2), ("te", 1), ("cafe", 3)]
 print(resumir_ventas(ventas))
 
-# TODO: añade otro ejemplo con print y su resultado esperado en un comentario.
+# Ejemplo adicional:
+# Resultado esperado:
+# {'productos': {'manzana', 'pan'}, 'unidades': 12, 'por_producto': {'pan': 7, 'manzana': 5}}
+ventas_ejemplo2 = [("pan", 4), ("manzana", 5), ("pan", 3)]
+print(resumir_ventas(ventas_ejemplo2))
