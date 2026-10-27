@@ -1,4 +1,4 @@
-"""EJERCICIO 02 — Preparar un catálogo
+"""EJERCICIO 02 – Preparar un catálogo
 
 ENUNCIADO
 Cada producto tiene nombre, precio y categoria. Los nombres son únicos.
@@ -22,12 +22,16 @@ Añade al menos otro ejemplo usando print y escribe en un comentario qué espera
 Al terminar: git commit -m "Resuelve ejercicio 02".
 """
 
+
 def preparar_catalogo(productos):
-    # TODO: implementa lo solicitado y devuelve el resultado.
-    pass
+    return {
+        "disponibles": [p["nombre"] for p in productos if p["precio"] <= 20],
+        "precios": {p["nombre"]: p["precio"] for p in productos},
+        "categorias": {p["categoria"] for p in productos}
+    }
 
 
-# Ejemplo de uso: inicialmente imprime None porque falta la implementación.
+# Ejemplo de uso:
 productos = [
     {"nombre": "cafe", "precio": 10, "categoria": "bebida"},
     {"nombre": "torta", "precio": 25, "categoria": "postre"},
@@ -35,4 +39,8 @@ productos = [
 ]
 print(preparar_catalogo(productos))
 
-# TODO: añade otro ejemplo con print y su resultado esperado en un comentario.
+productos_ejemplo2 = [
+    {"nombre": "ensalada", "precio": 30, "categoria": "ensalada"},
+    {"nombre": "jugo", "precio": 15, "categoria": "bebida"},
+]
+print(preparar_catalogo(productos_ejemplo2))
