@@ -28,13 +28,11 @@ def resumir_ventas(ventas):
     por_producto = {}
 
     for producto, cantidad in ventas:
-        # Añadir al conjunto de productos
+        
         productos.add(producto)
-        
-        # Sumar al total general de unidades
+  
         unidades += cantidad
-        
-        # Acumular la cantidad en el diccionario por producto
+
         if producto in por_producto:
             por_producto[producto] += cantidad
         else:
