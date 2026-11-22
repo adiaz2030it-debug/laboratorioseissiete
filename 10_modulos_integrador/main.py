@@ -22,6 +22,7 @@ Con [] se espera:
 Ejecuta desde la raíz: python 10_modulos_integrador/main.py
 Añade otro ejemplo con print y su resultado esperado en un comentario.
 Haz un commit: "Resuelve ejercicio 10".
+
 """
 
 from datos import PRODUCTOS

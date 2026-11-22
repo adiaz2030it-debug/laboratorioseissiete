@@ -20,6 +20,7 @@ Completa la implementación sin cambiar los nombres ni los parámetros.
 Ejecuta el archivo y compara lo impreso con el resultado del enunciado.
 Añade al menos otro ejemplo usando print y escribe en un comentario qué esperas.
 Al terminar: git commit -m "Resuelve ejercicio 02".
+
 """
 
 

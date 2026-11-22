@@ -1,5 +1,6 @@
 """Datos del ejercicio 10. Importar desde main.py; no modificar."""
 
+
 PRODUCTOS = [
     {"nombre": "cafe", "precio": 10, "stock": 8, "categoria": "bebida"},
     {"nombre": "te", "precio": 8, "stock": 0, "categoria": "bebida"},

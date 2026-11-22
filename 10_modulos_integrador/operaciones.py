@@ -16,6 +16,7 @@ Devuelve un diccionario con:
   e invócala dentro de una comprensión de listas.
 No modifiques productos ni imprimas dentro de la función.
 Para [] devuelve listas y set vacíos, valor_total=0 y hay_agotados=False.
+
 """
 
 from functools import reduce
