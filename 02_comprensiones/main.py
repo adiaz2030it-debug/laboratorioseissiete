@@ -39,6 +39,9 @@ productos = [
 ]
 print(preparar_catalogo(productos))
 
+# Ejemplo adicional:
+# Resultado esperado:
+# {'disponibles': ['jugo'], 'precios': {'ensalada': 30, 'jugo': 15}, 'categorias': {'ensalada', 'bebida'}}
 productos_ejemplo2 = [
     {"nombre": "ensalada", "precio": 30, "categoria": "ensalada"},
     {"nombre": "jugo", "precio": 15, "categoria": "bebida"},
