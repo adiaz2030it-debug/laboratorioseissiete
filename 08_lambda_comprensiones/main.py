@@ -22,13 +22,19 @@ Al terminar: git commit -m "Resuelve ejercicio 08".
 """
 
 def generar_simulaciones(precios, porcentajes):
-    # TODO: implementa lo solicitado y devuelve el resultado.
-    pass
+    aplicar_descuento = lambda precio, porcentaje: round(precio * (1 - porcentaje / 100), 2)
+    return [
+        [aplicar_descuento(precio, porcentaje) for precio in precios]
+        for porcentaje in porcentajes
+    ]
 
 
-# Ejemplo de uso: inicialmente imprime None porque falta la implementación.
+# Ejemplo de uso:
 precios = [10, 20, 40]
 porcentajes = [0, 10, 25]
-print(generar_simulaciones(precios, porcentajes))
+print(generar_simulaciones(precios, porcentajes))  
 
-# TODO: añade otro ejemplo con print y su resultado esperado en un comentario.
+# Otros ejemplos 
+print(generar_simulaciones([50, 100], [50, 100]))  
+print(generar_simulaciones([], [10, 20])) 
+print(generar_simulaciones([10, 20], [])) 

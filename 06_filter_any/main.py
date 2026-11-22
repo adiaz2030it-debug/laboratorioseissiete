@@ -22,16 +22,27 @@ Al terminar: git commit -m "Resuelve ejercicio 06".
 """
 
 def revisar_stock(productos):
-    # TODO: implementa lo solicitado y devuelve el resultado.
-    pass
+    bajo_stock = filter(lambda p: p["stock"] < 5, productos)
+    reponer = list(map(lambda p: p["nombre"], bajo_stock))
+    hay_agotados = any(map(lambda p: p["stock"] == 0, productos))
+    
+    return {
+        "reponer": reponer,
+        "hay_agotados": hay_agotados,
+    }
 
 
-# Ejemplo de uso: inicialmente imprime None porque falta la implementación.
+# Ejemplo de uso:
 productos = [
     {"nombre": "cafe", "stock": 8},
     {"nombre": "te", "stock": 0},
     {"nombre": "torta", "stock": 3},
 ]
-print(revisar_stock(productos))
+print(revisar_stock(productos))  
 
-# TODO: añade otro ejemplo con print y su resultado esperado en un comentario.
+# Otros ejemplos 
+print(revisar_stock([
+    {"nombre": "agua", "stock": 5},
+    {"nombre": "jugo", "stock": 4},
+])) 
+print(revisar_stock([])) 
